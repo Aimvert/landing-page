@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.heading {
+    font-size: 36px;
+    text-align: center;
+}
+
+.description {
+    font-size: 18px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+body {
+    background: linear-gradient(
+        to bottom,
+        #172143 0%,
+        #19132a 50%,
+        #3e1e4f 100%
+    );
+}
+
+.heading,
+.description,
+button {
+    color: #f2f2f2;
+}
+
+.logo {
+    width: 150px;
+    border-radius: 50%;
+}
+
+button {
+    font-size: 18px;
+    padding: 15px 65px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+
+    --color-1: white;
+}
+
+.get-started {
+    --color-2: #00a3ff;
+    color: var(--color-1);
+    border-color: var(--color-2);
+}
+
+.learn-more {
+    --color-2: #8c5f8d;
+    color: var(--color-1);
+    border-color: var(--color-2);
+}
+
+.buttons > button > span {
+    color: var(--color-2);
+    font-size: 1.2em;
+}
+
+button:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+#email {
+    display: inline;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+}
