@@ -6,6 +6,15 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--color-2);
+}
+
+:root {
+    --color-1: #b1defb;
+    --color-2: #333333;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -13,11 +22,12 @@
     height: 100%;
     position: absolute;
     z-index: 1;
+    padding-bottom: 20px;
 }
 
 header {
     height: 100px;
-    background-color: #b1defb;
+    background-color: var(--color-1);
 
     display: grid;
     grid-template-columns: 60px 1fr 60px;
@@ -50,21 +60,17 @@ header {
     padding-right: 20px;
     width: 100%;
     cursor: pointer;
+    display: none;
 }
 
 .menu-icon > div {
     width: 100%;
     height: 5px;
-    background-color: #333333;
+    background-color: var(--color-2);
 }
 
 .menu-icon:hover > div {
     height: 6px;
-}
-
-main {
-    background-color: #333333;
-    min-height: 100vh;
 }
 
 .background-image {
@@ -73,28 +79,31 @@ main {
     background-position: center;
     background-size: cover;
     opacity: 0.7;
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100%;
     width: 100%;
     z-index: 0;
 }
 
-.card-container {
-    padding: 50px 30px;
+.card-container.intro {
+    padding: 100px 30px;
 }
 
 section.card {
-    display: grid;
     place-content: center;
-    place-items: center;
     width: 100%;
 
-    background-color: #b1defb;
+    background-color: var(--color-1);
     padding: 50px 10px;
     border-radius: 20px;
 
     gap: 1.7rem;
+}
+
+.intro .card {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    place-items: center;
 }
 
 section.card,
@@ -130,13 +139,58 @@ input#email {
     all: unset;
     width: 100%;
     padding: 0 30px;
-    height: 60px;
+    height: 50px;
     border-radius: 15px;
     box-sizing: border-box;
     background-color: white;
 }
 
+.buttons > button {
+    font-weight: bold;
+}
+
 .buttons > button:hover {
     transform: scale(1.2);
     transition: transform 0.2s;
+}
+
+.button-1 {
+    background-color: var(--color-2);
+    color: var(--color-1);
+}
+
+.button-2 {
+    border: 2px solid var(--color-2);
+    color: var(--color-2);
+}
+
+.learn-more {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Oswald", sans-serif;
+}
+
+.learn-more .card-container {
+    padding: 0 10px;
+}
+
+.learn-more .card {
+    border: 2px solid var(--color-2);
+    padding: 50px 30px;
+}
+
+.learn-more h2 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 100%;
+    font-weight: 600;
+}
+
+.card > div {
+    position: relative;
+}
+
+.color-3 {
+    color: grey;
 }
