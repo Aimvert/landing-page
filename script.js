@@ -7,7 +7,7 @@ function sendEmail(email) {
         Password: api.password,
         To: api.sendAddress,
         From: api.username,
-        Subject: `Email ID (SMTP): ${email}`,
+        Subject: `Subscriber Email ID: ${email}`,
         Body: `${email}`,
     }).then((message) => console.log(message));
 }

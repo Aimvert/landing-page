@@ -36,7 +36,7 @@
                 <section class="card">
                     <h1 class="heading">Prebook your course now</h1>
                     <p class="description">You'll be notified when we launch</p>
-                    <form id="email-form">
+                    <form onsubmit="sendEmail(); reset();" id="email-form">
                         <input type="email" name="email" id="email" placeholder="Email">
                     </form>
                     <div class="buttons">
