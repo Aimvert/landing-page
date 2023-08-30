@@ -36,12 +36,12 @@
                 <section class="card">
                     <h1 class="heading">Prebook your course now</h1>
                     <p class="description">You'll be notified when we launch</p>
-                    <form onsubmit="sendEmail(); reset();" id="email-form">
+                    <form id="email-form">
                         <input type="email" name="email" id="email" placeholder="Email">
                     </form>
                     <div class="buttons">
-                        <button class="button-1">Submit <span>→</span></button>
-                        <button class="button-2">Learn more <span>↓</span></button>
+                        <button form="email-form" type="submit" class="button-1 button">Submit <span>→</span></button>
+                        <button class="button-2 button">Learn more <span>↓</span></button>
                     </div>
                 </section>
             </div>
