@@ -20,3 +20,10 @@ emailForm.addEventListener("submit", (e) => {
     emailInput.value = "";
     sendEmail(emailAddress);
 });
+
+const learnMoreBtn = document.querySelector(".learn-more-btn");
+learnMoreBtn.addEventListener("click", () => {
+    document
+        .getElementById("learn-more")
+        .scrollIntoView({ behavior: "smooth" });
+});
