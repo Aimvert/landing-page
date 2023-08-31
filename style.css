@@ -87,7 +87,9 @@ header {
 }
 
 .card-container.intro {
-    padding: 100px 30px;
+    padding-top: 40px ;
+    padding-bottom: 100px;
+    padding-inline: 30px; 
 }
 
 section.card {
@@ -102,7 +104,7 @@ section.card {
 }
 
 .intro .card {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.6);
     place-items: center;
 }
 
@@ -114,6 +116,10 @@ section.card,
 
 .card > .heading {
     font-size: 2em;
+    text-align: center;
+}
+
+.card > .description {
     text-align: center;
 }
 
